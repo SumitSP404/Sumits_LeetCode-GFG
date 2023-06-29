@@ -38,11 +38,11 @@ class Compute {
     
     public int largest(int arr[], int n)
     {
-        if(arr.length == 0){
-            return Integer.MIN_VALUE;
-        }
-        int ans = arr[arr.length-1];
-        for(int i =0;i<arr.length;i++){
+        // if(arr.length == 0){
+        //     return Integer.MIN_VALUE;
+        // }
+        int ans = arr[0];
+        for(int i =0;i<n;i++){
             if(arr[i]>ans){
                 ans = arr[i];
             }
