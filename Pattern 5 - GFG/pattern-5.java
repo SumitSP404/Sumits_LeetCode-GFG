@@ -21,15 +21,12 @@ class Solution {
 
     void printTriangle(int n) {
         // code here
-           int i = 1;
-        while(i<=n){
-            int j = n;
-            while(j >= i){
-                System.out.print("* ");
-                j = j - 1;
-            }
-            System.out.println();
-            i = i + 1;
-    }
+       int i,j;
+       for(i=1; i<=n;i++){
+           for(j=n; j>=i;j--){
+               System.out.print("* ");
+           }
+           System.out.println();
+       }
 }
 }
