@@ -24,18 +24,13 @@ class GFG {
 
 class Solution {
     int isPanagram(String S) {
-        // code here
-        S = S.replaceAll(" "," ");
-        S = S.toLowerCase();
-        Set<Character> set = new HashSet<>();
-        for(int i='a';i<='z';i++){
-            set.add((char) i);
-        }
-         for(int i=0; i<S.length();i++){
-             
-            set.remove(S.charAt(i));
-            if(set.isEmpty()) return 1;
-        }
-        return 0;
+          S = S.replace(" ","");
+          S = S.toUpperCase();
+       for(char i = 'A'; i <= 'Z'; i++){
+           if(!S.contains(Character.toString(i))){
+               return 0;
+           }
+       }
+       return 1;  
     }
-}
+};
